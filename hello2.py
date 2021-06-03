@@ -24,5 +24,6 @@ f.write(html_template)
 f.close()
   
 # 1st method how to open html files in chrome using
-filename = 'file:///'+os.getpwd()+'/' + 'hello1.html'
+filename = 'file:///'+os.getcwd()+'/' + 'hello1.html'
 webbrowser.open_new_tab(filename)
+print("hello world")
