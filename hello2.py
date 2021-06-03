@@ -1,9 +1,28 @@
-f = open('helloworld.html','w')
 
-message = """<html>
+# creating nd viewing the html files in python
+  
+import webbrowser
+import os
+  
+# to open/create a new html file in the write mode
+f = open('hello1.html', 'w')
+  
+# the html code which will go in the file GFG.html
+html_template = """
+<html>
 <head></head>
-<body><p>Hello World!</p></body>
-</html>"""
-
-f.write(message)
+<body>
+<p>Welcome to demo web page</p>
+  
+</body>
+</html>
+"""
+# writing the code into the file
+f.write(html_template)
+  
+# close the file
 f.close()
+  
+# 1st method how to open html files in chrome using
+filename = 'file:///'+os.getcwd()+'/' + 'GFG.html'
+webbrowser.open_new_tab(filename)
